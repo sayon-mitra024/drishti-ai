@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-bright":"#fcf9f8","tertiary-container":"#28497b","on-primary-fixed-variant":"#881c2b","on-background":"#1c1b1b","tertiary":"#093263","on-secondary-fixed":"#40000c","secondary-fixed-dim":"#ffb3b6","tertiary-fixed-dim":"#a9c7ff","on-tertiary-container":"#9ab9f2","on-tertiary":"#ffffff","on-primary-container":"#ff9da0","error":"#ba1a1a","outline-variant":"#debfbf","surface-container-lowest":"#ffffff","error-container":"#ffdad6","inverse-primary":"#ffb3b4","secondary":"#ae2d40","on-error":"#ffffff","secondary-container":"#ff6978","surface-container-highest":"#e5e2e1","on-surface-variant":"#574142","background":"#fcf9f8","inverse-surface":"#313030","surface-tint":"#a93441","primary-fixed-dim":"#ffb3b4","on-tertiary-fixed":"#001b3d","surface-dim":"#dcd9d9","tertiary-fixed":"#d6e3ff","surface":"#fcf9f8","on-secondary-container":"#6c001b","on-secondary-fixed-variant":"#8d112b","surface-container-high":"#eae7e7","secondary-fixed":"#ffdada","outline":"#8b7171","inverse-on-surface":"#f3f0ef","primary-container":"#8b1e2d","surface-variant":"#e5e2e1","on-tertiary-fixed-variant":"#254778","primary":"#6b0119","on-primary":"#ffffff","surface-container":"#f0edec","on-error-container":"#93000a","on-secondary":"#ffffff","on-surface":"#1c1b1b","primary-fixed":"#ffdada","surface-container-low":"#f6f3f2","on-primary-fixed":"#40000b"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter-desktop":"1.5rem","gutter":"1rem","margin":"1rem","space-md":"1rem","space-xs":"0.25rem","margin-desktop":"2rem","space-sm":"0.5rem","space-xl":"2rem","space-lg":"1.5rem"},fontFamily:{"headline-md":["Geist"],"label-sm":["Geist"],"headline-xl-mobile":["Geist"],"code-metric-sm":["JetBrains Mono"],"code-metric":["JetBrains Mono"],"label-md":["Geist"],"headline-lg":["Geist"],"label-lg":["Geist"],"body-lg":["Geist"],"body-sm":["Geist"],"headline-sm":["Geist"],"body-md":["Geist"],"headline-xl":["Geist"]},fontSize:{"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"500"}],"headline-xl-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}],"code-metric-sm":["11px",{"lineHeight":"14px","letterSpacing":"0em","fontWeight":"400"}],"code-metric":["13px",{"lineHeight":"16px","letterSpacing":"-0.01em","fontWeight":"500"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-60 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-lowest"><img alt="Drishti AI Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W_3f98MyKXT4vlQhn-kwxKHo1QQceTJ16t_oBEQVzI0_021msIaxp7MxTkoTZR_ghEgLuyvUNJ77YukWRwkIkXsaB4P8sMnkuTl19_srqMR9DexCyz6o8Mkn6z9rmNhOQEH3-ashGl3x7noEFVn37V7yPYENooa1DfVCgWT_ixm_sE0xjRTWJ30BxLGcCl4fsiUjQ4oBAfeVBT659CwgIVYoP5Ebe8tTvb8YlGvN4FQu_h6gxBhx3guvc"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-tight tracking-tight">Drishti AI</span><span class="font-code-metric-sm text-code-metric-sm text-on-surface-variant tracking-normal uppercase">Retinal Screening</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs bg-surface-container-low rounded flex items-center justify-between"><span class="font-code-metric-sm text-code-metric-sm text-on-surface-variant">Local Edge Mode</span><span class="font-code-metric-sm text-code-metric-sm text-tertiary font-medium">v1.0</span></div></div><nav class="flex flex-col gap-space-xs px-space-sm py-space-xs" data-active-classes="bg-primary-container text-on-primary font-medium rounded-lg"><a class="flex items-center justify-between px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="overview" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">home</span><span class="font-label-md text-label-md">Overview</span></div></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-space-sm transition-colors bg-primary-container text-on-primary font-medium rounded-lg" data-path="new-screening" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">add_circle</span><span class="font-label-md text-label-md">New Screening</span></div><span class="px-space-xs py-0.5 rounded bg-primary text-on-primary font-code-metric-sm text-code-metric-sm uppercase">Active</span></a><a class="flex items-center justify-between px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="history" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">clinical_notes</span><span class="font-label-md text-label-md">Screening History</span></div></a><a class="flex items-center justify-between px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="analytics" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">insights</span><span class="font-label-md text-label-md">Analytics</span></div></a><a class="flex items-center justify-between px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="research-validation" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">verified</span><span class="font-label-md text-label-md">Research & Validation</span></div></a></nav></div><div class="p-space-sm flex flex-col gap-space-sm bg-surface-container-low"><div class="p-space-sm bg-surface-container-lowest rounded-lg flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span><span class="font-code-metric-sm text-code-metric-sm text-on-surface font-medium">EfficientNet-B0 v1.0</span></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-code-metric-sm text-code-metric-sm">Engine Status</span><span class="font-code-metric-sm text-code-metric-sm text-tertiary font-medium">Connected</span></div></div><div class="flex items-center gap-space-sm px-space-xs py-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-on-surface truncate">Dr. A. Sharma, MD</span><span class="font-code-metric-sm text-code-metric-sm text-on-surface-variant truncate">Vitreoretinal Dept</span></div></div></div></aside><div class="pl-60"><header class="fixed top-0 left-60 right-0 z-40 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-md flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="Drishti AI Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W_3f98MyKXT4vlQhn-kwxKHo1QQceTJ16t_oBEQVzI0_021msIaxp7MxTkoTZR_ghEgLuyvUNJ77YukWRwkIkXsaB4P8sMnkuTl19_srqMR9DexCyz6o8Mkn6z9rmNhOQEH3-ashGl3x7noEFVn37V7yPYENooa1DfVCgWT_ixm_sE0xjRTWJ30BxLGcCl4fsiUjQ4oBAfeVBT659CwgIVYoP5Ebe8tTvb8YlGvN4FQu_h6gxBhx3guvc"/><div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant"><span class="text-on-surface font-medium">Drishti AI Workstation</span><span class="material-symbols-outlined text-[14px]">chevron_right</span><span class="text-primary font-medium">Clinical Pipeline</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container-low text-on-surface-variant"><span class="material-symbols-outlined text-[14px] text-tertiary">speed</span><span class="font-code-metric-sm text-code-metric-sm">Inference Latency: 142ms • Precision Mode</span></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-tertiary-fixed text-on-tertiary-fixed font-code-metric-sm text-code-metric-sm"><span class="material-symbols-outlined text-[14px]">info</span><span>Screening Assistance Mode • Non-Diagnostic</span></div><a class="flex items-center gap-space-xs h-10 px-space-md bg-primary-container hover:bg-primary text-on-primary rounded-lg font-label-md text-label-md transition-colors" data-path="new-screening" href="#"><span class="material-symbols-outlined text-[18px]">add</span><span>+ Start New Screening</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Workflow Navigation & Step Indicator Bar -->
+<section class="bg-surface-container-lowest px-space-md py-space-sm border-b border-surface-container-high sticky top-16 z-30 shadow-sm">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-space-md">
+<!-- 5-Step Clinical Pipeline Tracker -->
+<div class="flex items-center gap-space-xs sm:gap-space-sm w-full md:w-auto overflow-x-auto pb-1 md:pb-0">
+<!-- Step 1 -->
+<button class="step-btn flex items-center gap-space-xs text-left px-space-xs py-1 rounded hover:bg-surface-container-low transition-colors group" data-step="1" onclick="switchScreeningStep(1)">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface font-code-metric-sm text-code-metric-sm flex items-center justify-center font-medium group-hover:bg-primary-container group-hover:text-on-primary">✓</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">01 Capture</span>
+<span class="font-code-metric-sm text-code-metric-sm text-tertiary">OD Ingested</span>
+</div>
+</button>
+<span class="w-4 h-[1px] bg-outline-variant/40 shrink-0"></span>
+<!-- Step 2 -->
+<button class="step-btn flex items-center gap-space-xs text-left px-space-xs py-1 rounded hover:bg-surface-container-low transition-colors group" data-step="2" onclick="switchScreeningStep(2)">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface font-code-metric-sm text-code-metric-sm flex items-center justify-center font-medium group-hover:bg-primary-container group-hover:text-on-primary">✓</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">02 Quality Check</span>
+<span class="font-code-metric-sm text-code-metric-sm text-tertiary">96% Passed</span>
+</div>
+</button>
+<span class="w-4 h-[1px] bg-outline-variant/40 shrink-0"></span>
+<!-- Step 3 -->
+<button class="step-btn flex items-center gap-space-xs text-left px-space-xs py-1 rounded hover:bg-surface-container-low transition-colors group" data-step="3" onclick="switchScreeningStep(3)">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface font-code-metric-sm text-code-metric-sm flex items-center justify-center font-medium group-hover:bg-primary-container group-hover:text-on-primary">✓</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">03 AI Analyze</span>
+<span class="font-code-metric-sm text-code-metric-sm text-tertiary">142ms Infer</span>
+</div>
+</button>
+<span class="w-4 h-[1px] bg-outline-variant/40 shrink-0"></span>
+<!-- Step 4: Active Focus -->
+<button class="step-btn flex items-center gap-space-xs text-left px-space-xs py-1 rounded bg-primary-container/10 transition-colors" data-step="4" onclick="switchScreeningStep(4)">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary font-code-metric-sm text-code-metric-sm flex items-center justify-center font-bold">04</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">04 Results</span>
+<span class="font-code-metric-sm text-code-metric-sm text-primary font-medium">Grad-CAM Active</span>
+</div>
+</button>
+<span class="w-4 h-[1px] bg-outline-variant/40 shrink-0"></span>
+<!-- Step 5 -->
+<button class="step-btn flex items-center gap-space-xs text-left px-space-xs py-1 rounded hover:bg-surface-container-low transition-colors group" data-step="5" onclick="switchScreeningStep(5)">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface font-code-metric-sm text-code-metric-sm flex items-center justify-center font-medium group-hover:bg-primary-container group-hover:text-on-primary">05</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">05 Clinician Review</span>
+<span class="font-code-metric-sm text-code-metric-sm text-on-surface-variant">Attestation</span>
+</div>
+</button>
+</div>
+<!-- Quick Step Jump Selector -->
+<div class="flex items-center gap-space-xs self-end md:self-auto bg-surface-container-low p-1 rounded-lg">
+<span class="font-code-metric-sm text-code-metric-sm text-on-surface-variant px-2">Pipeline Stage:</span>
+<button class="px-2 py-1 text-xs font-label-md rounded bg-surface-container-lowest text-on-surface hover:text-primary transition-all" onclick="switchScreeningStep(1)">01 Upload</button>
+<button class="px-2 py-1 text-xs font-label-md rounded bg-surface-container-lowest text-on-surface hover:text-primary transition-all" onclick="switchScreeningStep(2)">02 QA</button>
+<button class="px-2 py-1 text-xs font-label-md rounded bg-surface-container-lowest text-on-surface hover:text-primary transition-all" onclick="switchScreeningStep(3)">03 Scanner</button>
+<button class="px-2 py-1 text-xs font-label-md rounded bg-primary-container text-on-primary font-semibold shadow-xs" onclick="switchScreeningStep(4)">04 Results</button>
+<button class="px-2 py-1 text-xs font-label-md rounded bg-surface-container-lowest text-on-surface hover:text-primary transition-all" onclick="switchScreeningStep(5)">05 Sign-Off</button>
+</div>
+</div>
+</section>
+<!-- Technical Telemetry / Patient ID Ticker -->
+<div class="bg-surface-container-low px-space-md py-space-xs border-b border-surface-container-high">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-y-1 font-code-metric-sm text-code-metric-sm text-on-surface-variant">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="text-on-surface font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Case: #DR-88942-OD
+        </span>
+<span class="text-surface-dim">•</span>
+<span>Patient: P-4429 (M, 58y)</span>
+<span class="text-surface-dim">•</span>
+<span>HbA1c: 8.6% (Uncontrolled)</span>
+<span class="text-surface-dim">•</span>
+<span>Diabetic Duration: 11 yrs</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-code-metric-sm">EfficientNet-B0 Edge</span>
+<span>Batch Latency: 142ms</span>
+<span class="text-surface-dim">•</span>
+<span class="text-tertiary font-medium">Model Calibration: ECE 0.018</span>
+</div>
+</div>
+</div>
+<!-- Stage Sub-views (Dynamic Containers) -->
+<div class="max-w-7xl mx-auto w-full px-space-md py-space-md flex-1">
+<!-- SUB-VIEW 01: Capture Preview Drawer -->
+<div class="hidden flex-col gap-space-md mb-space-md bg-surface-container-lowest p-space-md rounded-xl shadow-sm border border-surface-container-high" id="subview-step-1">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Stage 01: Multi-field Retinal Image Acquisition</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Raw capture feed direct from non-mydriatic fundus camera (Topcon TRC-NW400 interface).</p>
+</div>
+<button class="text-xs font-label-md px-3 py-1.5 rounded bg-surface-container-high text-on-surface hover:text-primary flex items-center gap-1" onclick="switchScreeningStep(4)">
+          Return to Clinical Results <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-2">
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col gap-2 border border-surface-container-high">
+<div class="flex justify-between items-center text-xs">
+<span class="font-semibold text-primary">OD — Posterior Pole (Field 1)</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-[10px] font-code-metric-sm uppercase">2048 x 2048</span>
+</div>
+<div class="aspect-square bg-inverse-surface rounded overflow-hidden flex items-center justify-center relative">
+<img alt="Posterior Pole Fundus Scan" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbAp0qnKplaHzCNxEE0Hp7uY_3HW0BkRMolBrftLvJqsO5XrElcIYvGUDAE6liHDft_XkAt4W54FAUvkZ-kVD36VHDIr9JCHFlBLeFjVLWVQs1G1DX6r8fkhS86nghl43lCfA3BbsDV6MoveLJjmlptaFRUZX92ydcfhmSIdhglDi0wrx80wRvSC972C2-H_3PGW3ey8qWrij6jXEtLSdnlmCR_SgwG_oDreuohR7jvCsY9ySiuFe7"/>
+<span class="absolute bottom-2 right-2 px-2 py-0.5 bg-black/60 text-white rounded text-[10px] font-code-metric-sm">Selected for Inference</span>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col gap-2 border border-surface-container-high opacity-70">
+<div class="flex justify-between items-center text-xs">
+<span class="font-medium text-on-surface-variant">OD — Nasal Field (Field 2)</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-[10px] font-code-metric-sm uppercase">2048 x 2048</span>
+</div>
+<div class="aspect-square bg-inverse-surface rounded overflow-hidden flex flex-col items-center justify-center p-4 text-center">
+<span class="material-symbols-outlined text-outline-variant text-[32px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-inverse-on-surface mt-1">Secondary disc capture verified</span>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col gap-2 border border-surface-container-high opacity-70">
+<div class="flex justify-between items-center text-xs">
+<span class="font-medium text-on-surface-variant">OS — Left Eye (Fellow Eye)</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-[10px] font-code-metric-sm uppercase">2048 x 2048</span>
+</div>
+<div class="aspect-square bg-inverse-surface rounded overflow-hidden flex flex-col items-center justify-center p-4 text-center">
+<span class="material-symbols-outlined text-outline-variant text-[32px]">visibility</span>
+<span class="font-body-sm text-body-sm text-inverse-on-surface mt-1">Fellow eye screened: Mild NPDR</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SUB-VIEW 02: Quality Assurance Verification Drawer -->
+<div class="hidden flex-col gap-space-md mb-space-md bg-surface-container-lowest p-space-md rounded-xl shadow-sm border border-surface-container-high" id="subview-step-2">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Stage 02: Pre-Inference Image Quality Verification</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Automated heuristics ensure capture validity before passing to neural classifier.</p>
+</div>
+<button class="text-xs font-label-md px-3 py-1.5 rounded bg-surface-container-high text-on-surface hover:text-primary flex items-center gap-1" onclick="switchScreeningStep(4)">
+          Back to Main Results <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-5 gap-space-sm pt-2">
+<div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container-high flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Focus & Clarity</span>
+<div class="flex items-baseline justify-between mt-2">
+<span class="font-headline-sm text-headline-sm text-tertiary">96.4%</span>
+<span class="font-code-metric-sm text-code-metric-sm text-tertiary font-medium">PASSED</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 96%"></div>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container-high flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Illumination Uniformity</span>
+<div class="flex items-baseline justify-between mt-2">
+<span class="font-headline-sm text-headline-sm text-tertiary">94.1%</span>
+<span class="font-code-metric-sm text-code-metric-sm text-tertiary font-medium">PASSED</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 94%"></div>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container-high flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Field of View / Centration</span>
+<div class="flex items-baseline justify-between mt-2">
+<span class="font-headline-sm text-headline-sm text-tertiary">99.0%</span>
+<span class="font-code-metric-sm text-code-metric-sm text-tertiary font-medium">PASSED</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 99%"></div>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container-high flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Macula Visibility</span>
+<div class="flex items-baseline justify-between mt-2">
+<span class="font-headline-sm text-headline-sm text-tertiary">95.2%</span>
+<span class="font-code-metric-sm text-code-metric-sm text-tertiary font-medium">PASSED</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 95%"></div>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container-high flex flex-col justify-between col-span-2 sm:col-span-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Artifact / Cataract Blur</span>
+<div class="flex items-baseline justify-between mt-2">
+<span class="font-headline-sm text-headline-sm text-tertiary">0.0%</span>
+<span class="font-code-metric-sm text-code-metric-sm text-tertiary font-medium">CLEAR</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- SUB-VIEW 03: AI Scanner Simulation -->
+<div class="hidden flex-col gap-space-md mb-space-md bg-surface-container-lowest p-space-md rounded-xl shadow-sm border border-surface-container-high" id="subview-step-3">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Stage 03: Deep Feature Extraction & Ensemble Inference</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">EfficientNet-B0 ordinal classifier executing multi-crop test-time augmentation.</p>
+</div>
+<button class="text-xs font-label-md px-3 py-1.5 rounded bg-primary-container text-on-primary flex items-center gap-1" onclick="switchScreeningStep(4)">
+          View Completed Results <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-lg flex flex-col md:flex-row items-center gap-space-lg">
+<div class="relative w-48 h-48 rounded-full overflow-hidden bg-black shrink-0 border-2 border-primary">
+<img alt="Retinal Fundus Scanning" class="w-full h-full object-cover filter brightness-75" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbAp0qnKplaHzCNxEE0Hp7uY_3HW0BkRMolBrftLvJqsO5XrElcIYvGUDAE6liHDft_XkAt4W54FAUvkZ-kVD36VHDIr9JCHFlBLeFjVLWVQs1G1DX6r8fkhS86nghl43lCfA3BbsDV6MoveLJjmlptaFRUZX92ydcfhmSIdhglDi0wrx80wRvSC972C2-H_3PGW3ey8qWrij6jXEtLSdnlmCR_SgwG_oDreuohR7jvCsY9ySiuFe7"/>
+<div class="absolute inset-0 bg-gradient-to-b from-primary/30 via-transparent to-transparent animate-pulse"></div>
+<div class="absolute w-full h-1 bg-primary shadow-[0_0_12px_#ff6978] top-1/2 -translate-y-1/2"></div>
+</div>
+<div class="flex-1 flex flex-col gap-space-sm w-full">
+<div class="flex justify-between font-code-metric-sm text-code-metric-sm text-on-surface-variant">
+<span>Inference Cycle: 10-Crop TTA Execution</span>
+<span class="text-primary font-bold">100% Completed</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full w-full"></div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2">
+<div class="p-2 bg-surface-container-lowest rounded text-center">
+<span class="font-code-metric-sm text-[11px] text-on-surface-variant block">Backbone</span>
+<span class="font-code-metric text-xs font-semibold text-on-surface">EfficientNet-B0</span>
+</div>
+<div class="p-2 bg-surface-container-lowest rounded text-center">
+<span class="font-code-metric-sm text-[11px] text-on-surface-variant block">Input Tensor</span>
+<span class="font-code-metric text-xs font-semibold text-on-surface">224 x 224 x 3</span>
+</div>
+<div class="p-2 bg-surface-container-lowest rounded text-center">
+<span class="font-code-metric-sm text-[11px] text-on-surface-variant block">Latency</span>
+<span class="font-code-metric text-xs font-semibold text-on-surface">142ms Local</span>
+</div>
+<div class="p-2 bg-surface-container-lowest rounded text-center">
+<span class="font-code-metric-sm text-[11px] text-on-surface-variant block">Explainability</span>
+<span class="font-code-metric text-xs font-semibold text-tertiary">Grad-CAM v2</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- MAIN TWO-COLUMN WORKSPACE: 04 Results & 05 Review -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start" id="main-results-layout">
+<!-- ========================================== -->
+<!-- LEFT COLUMN: Imaging & Visual Explainability -->
+<!-- ========================================== -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Viewport Card Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm border border-surface-container-high overflow-hidden">
+<!-- Inspection Mode Toolbar -->
+<div class="p-space-sm bg-surface-container-low border-b border-surface-container-high flex flex-wrap items-center justify-between gap-space-sm">
+<!-- Inspection Mode Tabs -->
+<div class="inline-flex rounded-lg bg-surface-container p-0.5" id="inspection-mode-group">
+<button class="px-3 py-1.5 rounded-md text-xs font-label-md transition-all text-on-surface-variant hover:text-on-surface" id="mode-btn-original" onclick="setInspectionMode('original')">
+                Original Fundus
+              </button>
+<button class="px-3 py-1.5 rounded-md text-xs font-label-md transition-all bg-surface-container-lowest text-primary font-semibold shadow-xs" id="mode-btn-gradcam" onclick="setInspectionMode('gradcam')">
+                Grad-CAM Heatmap
+              </button>
+<button class="px-3 py-1.5 rounded-md text-xs font-label-md transition-all text-on-surface-variant hover:text-on-surface" id="mode-btn-split" onclick="setInspectionMode('split')">
+                Split Comparison
+              </button>
+<button class="px-3 py-1.5 rounded-md text-xs font-label-md transition-all text-on-surface-variant hover:text-on-surface" id="mode-btn-vessels" onclick="setInspectionMode('vessels')">
+                High-Pass Vessels
+              </button>
+</div>
+<!-- Zoom & View Tools -->
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 text-xs font-code-metric-sm rounded bg-surface-container-lowest text-on-surface border border-surface-container-high hover:bg-surface-container" id="zoom-1x" onclick="setZoom(1.0)">1.0x</button>
+<button class="px-2 py-1 text-xs font-code-metric-sm rounded bg-surface-container-lowest text-on-surface border border-surface-container-high hover:bg-surface-container" id="zoom-15x" onclick="setZoom(1.5)">1.5x</button>
+<button class="px-2 py-1 text-xs font-code-metric-sm rounded bg-surface-container-lowest text-on-surface border border-surface-container-high hover:bg-surface-container" id="zoom-2x" onclick="setZoom(2.2)">2.2x</button>
+<button class="p-1 rounded bg-surface-container-lowest text-on-surface border border-surface-container-high hover:bg-surface-container" onclick="resetViewer()" title="Reset View">
+<span class="material-symbols-outlined text-[16px] block">restart_alt</span>
+</button>
+</div>
+</div>
+<!-- The Interactive High-Resolution Viewport Canvas Area -->
+<div class="relative w-full aspect-square bg-[#0a0708] flex items-center justify-center overflow-hidden select-none cursor-crosshair group" id="retinal-viewport">
+<!-- Scalable Inner Stage -->
+<div class="relative w-full h-full flex items-center justify-center transition-transform duration-200 ease-out origin-center" id="viewport-stage">
+<!-- 1. Base Layer: Native High-Res Fundus Image -->
+<img alt="Clinical Retinal Fundus Photography OD" class="w-full h-full object-contain pointer-events-none" id="base-fundus-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbAp0qnKplaHzCNxEE0Hp7uY_3HW0BkRMolBrftLvJqsO5XrElcIYvGUDAE6liHDft_XkAt4W54FAUvkZ-kVD36VHDIr9JCHFlBLeFjVLWVQs1G1DX6r8fkhS86nghl43lCfA3BbsDV6MoveLJjmlptaFRUZX92ydcfhmSIdhglDi0wrx80wRvSC972C2-H_3PGW3ey8qWrij6jXEtLSdnlmCR_SgwG_oDreuohR7jvCsY9ySiuFe7"/>
+<!-- 2. High-Pass Vessel Filter Layer (Toggled via mode) -->
+<div class="absolute inset-0 pointer-events-none opacity-0 transition-opacity duration-300 mix-blend-color-dodge" id="vessel-filter-layer">
+<img alt="Vessel enhanced fundus" class="w-full h-full object-contain filter contrast-200 invert hue-rotate-180 brightness-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbAp0qnKplaHzCNxEE0Hp7uY_3HW0BkRMolBrftLvJqsO5XrElcIYvGUDAE6liHDft_XkAt4W54FAUvkZ-kVD36VHDIr9JCHFlBLeFjVLWVQs1G1DX6r8fkhS86nghl43lCfA3BbsDV6MoveLJjmlptaFRUZX92ydcfhmSIdhglDi0wrx80wRvSC972C2-H_3PGW3ey8qWrij6jXEtLSdnlmCR_SgwG_oDreuohR7jvCsY9ySiuFe7"/>
+</div>
+<!-- 3. Dynamic Grad-CAM Pseudo-Color Heatmap Layer -->
+<div class="absolute inset-0 pointer-events-none transition-opacity duration-200 flex items-center justify-center" id="gradcam-heatmap-layer" style="opacity: 0.72;">
+<!-- Precision SVG thermal map precisely tailored to the microaneurysms and hard exudates in the temporal/superior parafoveal regions -->
+<svg class="w-full h-full max-w-full max-h-full" fill="none" viewbox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- Calibrated Grad-CAM Thermal Gradients -->
+<radialgradient cx="42%" cy="42%" id="gradcam-hotspot-1" r="24%">
+<stop offset="0%" stop-color="#8B1E2D" stop-opacity="0.95"></stop>
+<stop offset="28%" stop-color="#D9383A" stop-opacity="0.85"></stop>
+<stop offset="55%" stop-color="#FF9D2E" stop-opacity="0.65"></stop>
+<stop offset="78%" stop-color="#1E6382" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#093263" stop-opacity="0"></stop>
+</radialgradient>
+<radialgradient cx="38%" cy="62%" id="gradcam-hotspot-2" r="22%">
+<stop offset="0%" stop-color="#8B1E2D" stop-opacity="0.92"></stop>
+<stop offset="32%" stop-color="#FF4D4D" stop-opacity="0.80"></stop>
+<stop offset="60%" stop-color="#FFA834" stop-opacity="0.55"></stop>
+<stop offset="85%" stop-color="#28497B" stop-opacity="0.30"></stop>
+<stop offset="100%" stop-color="#093263" stop-opacity="0"></stop>
+</radialgradient>
+<radialgradient cx="48%" cy="50%" id="gradcam-hotspot-fovea-clear" r="9%">
+<stop offset="0%" stop-color="#000000" stop-opacity="0"></stop>
+<stop offset="100%" stop-color="#000000" stop-opacity="0.2"></stop>
+</radialgradient>
+<!-- Optic Disc Landmark Isolation Mask -->
+<radialgradient cx="72%" cy="49%" id="disc-contour" r="10%">
+<stop offset="0%" stop-color="#28497B" stop-opacity="0.3"></stop>
+<stop offset="85%" stop-color="#28497B" stop-opacity="0.1"></stop>
+<stop offset="100%" stop-color="#28497B" stop-opacity="0"></stop>
+</radialgradient>
+</defs>
+<!-- Activation Zones matching image lesions -->
+<circle cx="430" cy="410" fill="url(#gradcam-hotspot-1)" mix-blend-mode="color-dodge" r="180"></circle>
+<circle cx="390" cy="620" fill="url(#gradcam-hotspot-2)" mix-blend-mode="color-dodge" r="170"></circle>
+<!-- Smaller high-activation microaneurysm cluster dots -->
+<circle cx="610" cy="340" fill="#8B1E2D" filter="blur(8px)" opacity="0.75" r="45"></circle>
+<circle cx="625" cy="530" fill="#FF4D4D" filter="blur(10px)" opacity="0.65" r="55"></circle>
+<circle cx="605" cy="650" fill="#FF8822" filter="blur(9px)" opacity="0.60" r="40"></circle>
+<!-- Optic disc low activation context -->
+<circle cx="720" cy="490" fill="url(#disc-contour)" r="80"></circle>
+<!-- Foveal avascular zone bounding ring -->
+<circle cx="485" cy="500" fill="none" opacity="0.75" r="28" stroke="#FFFFFF" stroke-dasharray="3 3" stroke-width="1.5"></circle>
+<text fill="#FFFFFF" font-family="JetBrains Mono" font-size="12" opacity="0.85" text-anchor="middle" x="485" y="542">FAZ (0.5mm)</text>
+</svg>
+</div>
+<!-- Interactive Split Comparison Divider (Toggled in Split Mode) -->
+<div class="absolute inset-0 pointer-events-none hidden" id="split-slider-pane">
+<div class="absolute inset-y-0 left-0 overflow-hidden" id="split-curtain" style="width: 50%;">
+<img alt="Raw fundus comparative side" class="w-full h-full object-contain pointer-events-none max-w-none" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbAp0qnKplaHzCNxEE0Hp7uY_3HW0BkRMolBrftLvJqsO5XrElcIYvGUDAE6liHDft_XkAt4W54FAUvkZ-kVD36VHDIr9JCHFlBLeFjVLWVQs1G1DX6r8fkhS86nghl43lCfA3BbsDV6MoveLJjmlptaFRUZX92ydcfhmSIdhglDi0wrx80wRvSC972C2-H_3PGW3ey8qWrij6jXEtLSdnlmCR_SgwG_oDreuohR7jvCsY9ySiuFe7" style="width: 1000px;"/>
+</div>
+<!-- Hairline Divider Handle -->
+<div class="absolute inset-y-0 w-0.5 bg-white shadow-[0_0_8px_rgba(0,0,0,0.5)] cursor-ew-resize pointer-events-auto" id="split-handle" style="left: 50%;">
+<div class="absolute top-1/2 -translate-y-1/2 -left-3.5 w-7 h-7 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center shadow-md border border-surface-container-high">
+<span class="material-symbols-outlined text-[16px]">code</span>
+</div>
+</div>
+</div>
+</div>
+<!-- HUD Floating Overlays inside Viewport -->
+<div class="absolute top-3 left-3 flex items-center gap-1.5 bg-inverse-surface/85 backdrop-blur-md px-2.5 py-1 rounded-md text-white font-code-metric-sm text-code-metric-sm border border-white/10">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-ping"></span>
+<span>GRAD-CAM α: <span id="opacity-val-text">72%</span></span>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-2 bg-inverse-surface/85 backdrop-blur-md px-2.5 py-1 rounded-md text-white font-code-metric-sm text-code-metric-sm border border-white/10">
+<span class="text-tertiary-fixed-dim">FIELD: 45° POSTERIOR</span>
+<span class="text-white/40">|</span>
+<span class="text-secondary-fixed">MACULA: OD</span>
+</div>
+<!-- Heatmap Thermal Calibration Legend -->
+<div class="absolute bottom-3 left-3 bg-inverse-surface/90 backdrop-blur-md p-2 rounded-md border border-white/10 flex flex-col gap-1 w-44">
+<div class="flex justify-between text-[10px] font-code-metric-sm text-white/80">
+<span>Low Attn</span>
+<span class="text-secondary-container font-semibold">Model Focus</span>
+</div>
+<div class="h-2 w-full rounded-sm bg-gradient-to-r from-[#093263] via-[#FF9D2E] to-[#8B1E2D]"></div>
+<div class="flex justify-between text-[9px] font-code-metric-sm text-white/60">
+<span>0.0</span>
+<span>0.5</span>
+<span>1.0</span>
+</div>
+</div>
+</div>
+<!-- Heatmap Opacity Scrubber & Controls Footbar -->
+<div class="p-space-sm bg-surface-container-lowest border-t border-surface-container-high flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm flex-1 max-w-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant shrink-0 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">opacity</span> Heatmap Blend:
+              </span>
+<input class="w-full accent-primary h-1.5 bg-surface-container rounded-lg cursor-pointer" id="opacitySlider" max="100" min="0" oninput="updateOpacity(this.value)" type="range" value="72"/>
+<span class="font-code-metric-sm text-code-metric-sm font-semibold text-primary w-9 text-right" id="sliderValueText">72%</span>
+</div>
+<div class="flex items-center gap-2 text-xs">
+<button class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface-variant hover:text-on-surface border border-surface-container-high text-xs font-label-md flex items-center gap-1" id="fovea-toggle-btn" onclick="toggleFoveaRing()">
+<span class="material-symbols-outlined text-[14px]">adjust</span> FAZ Grid
+              </button>
+<button class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface-variant hover:text-on-surface border border-surface-container-high text-xs font-label-md flex items-center gap-1" onclick="openFullQualityDrawer()">
+<span class="material-symbols-outlined text-[14px]">tune</span> QA Metrics
+              </button>
+</div>
+</div>
+<!-- Medical Metadata Bar below viewport -->
+<div class="px-space-md py-space-xs bg-surface-container-low border-t border-surface-container-high font-code-metric-sm text-code-metric-sm text-on-surface-variant flex flex-wrap items-center justify-between gap-2">
+<span>Eye: <strong class="text-on-surface">OD (Right Eye)</strong></span>
+<span>Dimensions: <strong class="text-on-surface">2048 × 2048 px</strong></span>
+<span>Illumination: <strong class="text-on-surface">98% Optimal</strong></span>
+<span>Macula Centered: <strong class="text-on-surface">Yes (Verified)</strong></span>
+<span>Format: <strong class="text-on-surface">DICOM / RGB</strong></span>
+</div>
+</div>
+<!-- Explainability Deep Dive Callout Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm border border-surface-container-high flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">psychology</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Why did the AI predict Moderate NPDR?</h4>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-code-metric-sm text-[11px] uppercase tracking-wider font-semibold">
+              Grad-CAM v2.1 Explainability
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+            Highlighted spatial activations concentrate heavily across the <strong class="text-primary font-semibold">temporal and superior parafoveal sectors</strong>. The convolutional feature filters reacted predominantly to clusters of microaneurysms (punctate hemorrhages) and dense hard lipid exudates forming an incomplete circinate ring within 1 disc diameter of the foveal avascular zone.
+          </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-1">
+<div class="p-space-xs bg-surface-container-low rounded border border-surface-container-high flex flex-col">
+<span class="font-code-metric-sm text-[11px] text-on-surface-variant uppercase">Key Biomarker A</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Microaneurysms: Clustered (>15)</span>
+<span class="font-code-metric-sm text-[11px] text-tertiary mt-0.5">Activation Weight: 0.44</span>
+</div>
+<div class="p-space-xs bg-surface-container-low rounded border border-surface-container-high flex flex-col">
+<span class="font-code-metric-sm text-[11px] text-on-surface-variant uppercase">Key Biomarker B</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Hard Exudates: Circinate</span>
+<span class="font-code-metric-sm text-[11px] text-tertiary mt-0.5">Activation Weight: 0.38</span>
+</div>
+<div class="p-space-xs bg-surface-container-low rounded border border-surface-container-high flex flex-col">
+<span class="font-code-metric-sm text-[11px] text-on-surface-variant uppercase">Exclusion Check</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Neovascularization: Absent</span>
+<span class="font-code-metric-sm text-[11px] text-on-surface-variant mt-0.5">No PDR Criteria Met</span>
+</div>
+</div>
+<div class="p-space-xs bg-surface-container rounded text-on-surface-variant font-code-metric-sm text-[11px] flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-tertiary">info</span>
+<span>Interpretability notice: Heatmap overlays visualize spatial feature saliency and do not replace ophthalmoscopic biomicroscopy.</span>
+</div>
+</div>
+</div>
+<!-- ========================================== -->
+<!-- RIGHT COLUMN: AI Output, Referral & Review -->
+<!-- ========================================== -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- 1. Top Screening Result Banner -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm border-2 border-primary-container/40 relative overflow-hidden">
+<div class="absolute top-0 right-0 transform translate-x-4 -translate-y-4 w-28 h-28 bg-primary/5 rounded-full pointer-events-none"></div>
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-code-metric-sm text-code-metric-sm uppercase tracking-widest text-primary font-bold flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span> AI-ASSISTED SCREENING RESULT
+            </span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-code-metric-sm text-[11px] font-bold uppercase">
+              Suspect / Action Required
+            </span>
+</div>
+<!-- Main Diagnostic Classification Heading -->
+<div class="flex items-baseline justify-between pt-1">
+<div>
+<h2 class="font-headline-xl text-headline-xl text-primary font-extrabold tracking-tight">Moderate NPDR</h2>
+<p class="font-label-md text-label-md text-on-surface-variant -mt-1">Non-Proliferative Diabetic Retinopathy (ICDR Grade 2)</p>
+</div>
+<div class="text-right">
+<span class="font-headline-lg text-headline-lg text-primary font-bold">92.4%</span>
+<span class="font-code-metric-sm text-code-metric-sm text-on-surface-variant block">Ensemble Conf.</span>
+</div>
+</div>
+<!-- Mandatory Non-Diagnostic Clinical Safety Notice -->
+<div class="mt-space-sm p-space-xs rounded bg-surface-container border border-surface-container-high flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">gavel</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-tight">
+<strong>Mandatory Regulatory Notice:</strong> AI screening assistance mode. Requires clinical evaluation by an eye care professional. Does not represent a standalone definitive medical diagnosis.
+            </p>
+</div>
+</div>
+<!-- 2. ICDR 5-Class Severity Scale -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm border border-surface-container-high flex flex-col gap-space-sm">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">ICDR Severity Scale Spectrum</span>
+<span class="font-code-metric-sm text-code-metric-sm text-on-surface-variant">Standardized 5-Tier</span>
+</div>
+<!-- 5 Tier Step Blocks -->
+<div class="grid grid-cols-5 gap-1 pt-1">
+<!-- 0 - No DR -->
+<div class="flex flex-col items-center text-center p-2 rounded bg-surface-container-low border border-surface-container-high opacity-60">
+<span class="font-code-metric-sm text-[10px] font-semibold text-on-surface-variant">0</span>
+<span class="font-label-sm text-[11px] text-on-surface mt-0.5 leading-tight">No DR</span>
+</div>
+<!-- 1 - Mild -->
+<div class="flex flex-col items-center text-center p-2 rounded bg-surface-container-low border border-surface-container-high opacity-60">
+<span class="font-code-metric-sm text-[10px] font-semibold text-on-surface-variant">1</span>
+<span class="font-label-sm text-[11px] text-on-surface mt-0.5 leading-tight">Mild</span>
+</div>
+<!-- 2 - Moderate (ACTIVE) -->
+<div class="flex flex-col items-center text-center p-2 rounded bg-primary-container text-on-primary shadow-sm border border-primary relative transform scale-105 z-10">
+<div class="absolute -top-2 bg-secondary-container text-on-primary text-[9px] font-code-metric-sm px-1.5 py-0.2 rounded-full uppercase font-bold">
+                Assigned
+              </div>
+<span class="font-code-metric-sm text-[10px] font-bold text-on-primary">2</span>
+<span class="font-label-sm text-[11px] font-bold text-on-primary mt-0.5 leading-tight">Moderate</span>
+</div>
+<!-- 3 - Severe -->
+<div class="flex flex-col items-center text-center p-2 rounded bg-surface-container-low border border-surface-container-high opacity-60">
+<span class="font-code-metric-sm text-[10px] font-semibold text-on-surface-variant">3</span>
+<span class="font-label-sm text-[11px] text-on-surface mt-0.5 leading-tight">Severe</span>
+</div>
+<!-- 4 - Proliferative -->
+<div class="flex flex-col items-center text-center p-2 rounded bg-surface-container-low border border-surface-container-high opacity-60">
+<span class="font-code-metric-sm text-[10px] font-semibold text-on-surface-variant">4</span>
+<span class="font-label-sm text-[11px] text-on-surface mt-0.5 leading-tight">PDR</span>
+</div>
+</div>
+</div>
+<!-- 3. Multi-Class Probability Distribution -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm border border-surface-container-high flex flex-col gap-space-sm">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Ordinal Softmax Probabilities</span>
+<span class="font-code-metric-sm text-code-metric-sm text-tertiary">Temperature: T=1.0</span>
+</div>
+<div class="flex flex-col gap-2.5 pt-1">
+<!-- Class 0 -->
+<div class="flex items-center gap-space-sm text-xs">
+<span class="w-24 font-body-sm text-body-sm text-on-surface-variant shrink-0">0 — No DR</span>
+<div class="flex-1 bg-surface-container-high h-2.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 2.1%"></div>
+</div>
+<span class="w-12 text-right font-code-metric-sm text-code-metric-sm text-on-surface-variant">2.1%</span>
+</div>
+<!-- Class 1 -->
+<div class="flex items-center gap-space-sm text-xs">
+<span class="w-24 font-body-sm text-body-sm text-on-surface-variant shrink-0">1 — Mild DR</span>
+<div class="flex-1 bg-surface-container-high h-2.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 3.4%"></div>
+</div>
+<span class="w-12 text-right font-code-metric-sm text-code-metric-sm text-on-surface-variant">3.4%</span>
+</div>
+<!-- Class 2: Target -->
+<div class="flex items-center gap-space-sm text-xs font-semibold">
+<span class="w-24 font-body-sm text-body-sm text-primary shrink-0 font-bold">2 — Moderate</span>
+<div class="flex-1 bg-surface-container-high h-3 rounded-full overflow-hidden p-0.5">
+<div class="bg-primary-container h-full rounded-full transition-all duration-500" style="width: 92.4%"></div>
+</div>
+<span class="w-12 text-right font-code-metric text-code-metric text-primary font-bold">92.4%</span>
+</div>
+<!-- Class 3 -->
+<div class="flex items-center gap-space-sm text-xs">
+<span class="w-24 font-body-sm text-body-sm text-on-surface-variant shrink-0">3 — Severe DR</span>
+<div class="flex-1 bg-surface-container-high h-2.5 rounded-full overflow-hidden">
+<div class="bg-outline-variant h-full rounded-full" style="width: 1.6%"></div>
+</div>
+<span class="w-12 text-right font-code-metric-sm text-code-metric-sm text-on-surface-variant">1.6%</span>
+</div>
+<!-- Class 4 -->
+<div class="flex items-center gap-space-sm text-xs">
+<span class="w-24 font-body-sm text-body-sm text-on-surface-variant shrink-0">4 — PDR</span>
+<div class="flex-1 bg-surface-container-high h-2.5 rounded-full overflow-hidden">
+<div class="bg-outline-variant h-full rounded-full" style="width: 0.5%"></div>
+</div>
+<span class="w-12 text-right font-code-metric-sm text-code-metric-sm text-on-surface-variant">0.5%</span>
+</div>
+</div>
+</div>
+<!-- 4. Recommended Referral Guidance (NO Prescriptions) -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm border border-secondary/30 bg-gradient-to-br from-surface-container-lowest to-secondary-fixed/10 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">assignment_turned_in</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Recommended Referral Guidance</h4>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-code-metric-sm text-[10px] uppercase font-bold">Priority Triage</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg border border-surface-container-high flex flex-col gap-1.5">
+<div class="flex justify-between items-center font-label-md text-label-md">
+<span class="text-on-surface-variant font-medium">Triage Priority:</span>
+<span class="font-bold text-secondary">Prompt Clinical Evaluation</span>
+</div>
+<div class="flex justify-between items-center font-label-md text-label-md">
+<span class="text-on-surface-variant font-medium">Recommended Timeframe:</span>
+<span class="font-semibold text-on-surface">Within 4 to 8 Weeks</span>
+</div>
+<div class="flex justify-between items-center font-label-md text-label-md">
+<span class="text-on-surface-variant font-medium">Specialty Consultation:</span>
+<span class="text-on-surface">Comprehensive Dilated Ophthalmic Exam</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Identified Risk Markers:</span>
+<ul class="font-body-sm text-body-sm text-on-surface space-y-1 list-disc list-inside">
+<li>Multiple microaneurysms detected in >2 retinal quadrants</li>
+<li>Hard lipid exudates within 1 disc diameter of foveal center</li>
+<li>Macular thickening suspect (Recommend OCT macular volume scan)</li>
+<li>Venous beading / IRMA currently absent (Ruling out Severe Grade 3)</li>
+</ul>
+</div>
+</div>
+<!-- 5. Clinician Review, Attestation & Action Terminal -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm border border-surface-container-high flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">verified_user</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Clinician Attestation & Sign-off</h4>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-code-metric-sm text-[10px] uppercase font-bold" id="attestation-badge">
+              Pending Attestation
+            </span>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium" for="clinician-notes">
+              Clinical Assessment & Endorsement Note:
+            </label>
+<textarea class="w-full p-2.5 text-xs font-body-sm text-on-surface bg-surface border border-surface-container-high rounded-lg focus:outline-none focus:border-primary transition-colors leading-relaxed" id="clinician-notes" rows="3">Findings consistent with moderate non-proliferative diabetic retinopathy (NPDR). Refer to vitreoretinal specialist for dilated fundus biomicroscopy and consideration of macular OCT. Primary care alerted for glycemic & blood pressure control optimization.</textarea>
+</div>
+<!-- Interactive Action Buttons -->
+<div class="flex flex-col sm:flex-row items-center gap-space-sm pt-2">
+<button class="w-full sm:flex-1 h-10 px-space-md rounded-lg bg-primary hover:bg-on-primary-fixed-variant text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-2 transition-colors shadow-xs" id="btn-attest" onclick="attestScreening()">
+<span class="material-symbols-outlined text-[18px]">how_to_reg</span>
+<span>Confirm & Attest Screening</span>
+</button>
+<button class="w-full sm:w-auto h-10 px-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md border border-surface-container-high flex items-center justify-center gap-1.5 transition-colors" onclick="exportReferralSlip()">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Referral Slip</span>
+</button>
+</div>
+<div class="flex items-center justify-between pt-1 text-xs">
+<button class="text-error font-label-md hover:underline flex items-center gap-1" onclick="requestRecapture()">
+<span class="material-symbols-outlined text-[14px]">replay</span> Request Recapture
+            </button>
+<span class="font-code-metric-sm text-[11px] text-on-surface-variant">Attending: Dr. A. Sharma, MD</span>
+</div>
+<!-- Bottom Compliance & Model Attribution Footer -->
+<div class="border-t border-surface-container pt-space-xs mt-1 flex flex-col gap-1 text-[10px] font-code-metric-sm text-on-surface-variant/80">
+<div class="flex justify-between">
+<span>Drishti AI Workstation Engine v1.0.4</span>
+<span>ISO 13485 & HIPAA Compliant Data Flow</span>
+</div>
+<span>Trained on multi-ethnic fundus cohorts • Model weights cryptographically signed: SHA-256: 8f4c...3e1a</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Notification Toast Container -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-lg shadow-xl flex items-center gap-3 max-w-md border border-white/10" id="toast">
+<span class="material-symbols-outlined text-secondary-fixed text-[22px]" id="toast-icon">check_circle</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-xs font-semibold" id="toast-title">Attestation Confirmed</span>
+<span class="font-body-sm text-[11px] opacity-80" id="toast-desc">Referral slip generated and archived to patient EHR record.</span>
+</div>
+</div>
+</div>
+<script>
+  // Inspection modes & Viewport state
+  let currentZoom = 1.0;
+  let foveaGridVisible = true;
+
+  function updateOpacity(val) {
+    const layer = document.getElementById('gradcam-heatmap-layer');
+    const label = document.getElementById('sliderValueText');
+    const hudLabel = document.getElementById('opacity-val-text');
+    if (layer) layer.style.opacity = val / 100;
+    if (label) label.innerText = val + '%';
+    if (hudLabel) hudLabel.innerText = val + '%';
+  }
+
+  function setInspectionMode(mode) {
+    const modes = ['original', 'gradcam', 'split', 'vessels'];
+    modes.forEach(m => {
+      const btn = document.getElementById(`mode-btn-${m}`);
+      if (btn) {
+        if (m === mode) {
+          btn.className = "px-3 py-1.5 rounded-md text-xs font-label-md transition-all bg-surface-container-lowest text-primary font-semibold shadow-xs";
+        } else {
+          btn.className = "px-3 py-1.5 rounded-md text-xs font-label-md transition-all text-on-surface-variant hover:text-on-surface";
+        }
+      }
+    });
+
+    const heatmap = document.getElementById('gradcam-heatmap-layer');
+    const splitPane = document.getElementById('split-slider-pane');
+    const vesselLayer = document.getElementById('vessel-filter-layer');
+    const slider = document.getElementById('opacitySlider');
+
+    if (mode === 'original') {
+      if (heatmap) heatmap.style.opacity = '0';
+      if (splitPane) splitPane.classList.add('hidden');
+      if (vesselLayer) vesselLayer.style.opacity = '0';
+      if (slider) slider.value = 0;
+      updateOpacity(0);
+    } else if (mode === 'gradcam') {
+      if (heatmap) heatmap.style.opacity = '0.72';
+      if (splitPane) splitPane.classList.add('hidden');
+      if (vesselLayer) vesselLayer.style.opacity = '0';
+      if (slider) slider.value = 72;
+      updateOpacity(72);
+    } else if (mode === 'split') {
+      if (heatmap) heatmap.style.opacity = '0.85';
+      if (splitPane) splitPane.classList.remove('hidden');
+      if (vesselLayer) vesselLayer.style.opacity = '0';
+    } else if (mode === 'vessels') {
+      if (heatmap) heatmap.style.opacity = '0.20';
+      if (splitPane) splitPane.classList.add('hidden');
+      if (vesselLayer) vesselLayer.style.opacity = '0.75';
+      if (slider) slider.value = 20;
+      updateOpacity(20);
+    }
+  }
+
+  function setZoom(level) {
+    currentZoom = level;
+    const stage = document.getElementById('viewport-stage');
+    if (stage) {
+      stage.style.transform = `scale(${level})`;
+    }
+    ['zoom-1x', 'zoom-15x', 'zoom-2x'].forEach(id => {
+      const btn = document.getElementById(id);
+      if (btn) btn.classList.remove('bg-primary-container', 'text-on-primary', 'font-bold');
+    });
+    if (level === 1.0) document.getElementById('zoom-1x')?.classList.add('bg-primary-container', 'text-on-primary', 'font-bold');
+    if (level === 1.5) document.getElementById('zoom-15x')?.classList.add('bg-primary-container', 'text-on-primary', 'font-bold');
+    if (level === 2.2) document.getElementById('zoom-2x')?.classList.add('bg-primary-container', 'text-on-primary', 'font-bold');
+  }
+
+  function resetViewer() {
+    setZoom(1.0);
+    setInspectionMode('gradcam');
+  }
+
+  function toggleFoveaRing() {
+    const fovea = document.querySelector('#gradcam-heatmap-layer text');
+    const ring = document.querySelector('#gradcam-heatmap-layer circle[stroke="#FFFFFF"]');
+    foveaGridVisible = !foveaGridVisible;
+    if (fovea && ring) {
+      fovea.style.display = foveaGridVisible ? 'block' : 'none';
+      ring.style.display = foveaGridVisible ? 'block' : 'none';
+    }
+  }
+
+  function openFullQualityDrawer() {
+    switchScreeningStep(2);
+  }
+
+  // Workflow Pipeline Stage Switcher
+  function switchScreeningStep(stepNumber) {
+    [1, 2, 3].forEach(step => {
+      const el = document.getElementById(`subview-step-${step}`);
+      if (el) {
+        if (step === stepNumber) {
+          el.classList.remove('hidden');
+          el.classList.add('flex');
+        } else {
+          el.classList.remove('flex');
+          el.classList.add('hidden');
+        }
+      }
+    });
+
+    // Update active button indicators in header
+    document.querySelectorAll('.step-btn').forEach(btn => {
+      const s = parseInt(btn.getAttribute('data-step') || '0', 10);
+      if (s === stepNumber) {
+        btn.classList.add('bg-primary-container/10');
+      } else {
+        btn.classList.remove('bg-primary-container/10');
+      }
+    });
+
+    if (stepNumber === 5) {
+      document.getElementById('clinician-notes')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      document.getElementById('clinician-notes')?.focus();
+    }
+  }
+
+  // Interactive Attestation
+  function attestScreening() {
+    const badge = document.getElementById('attestation-badge');
+    const btn = document.getElementById('btn-attest');
+    if (badge && btn) {
+      badge.innerText = 'Attested & Signed';
+      badge.className = 'px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-code-metric-sm text-[10px] uppercase font-bold';
+      btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">verified</span><span>Attested by Dr. Sharma</span>';
+      btn.classList.replace('bg-primary', 'bg-tertiary');
+      showToast('Attestation Signed', 'Screening endorsed as Moderate NPDR and routed to vitreoretinal network.');
+    }
+  }
+
+  function exportReferralSlip() {
+    showToast('Referral Packet Exported', 'Comprehensive ophthalmic referral slip compiled (PDF) with Grad-CAM overlays.');
+  }
+
+  function requestRecapture() {
+    if (confirm('Flag fundus capture for technical recapture due to focus/illumination?')) {
+      switchScreeningStep(1);
+      showToast('Recapture Initiated', 'Notification sent to imaging technician station for repeat right-eye exposure.');
+    }
+  }
+
+  function showToast(title, desc) {
+    const toast = document.getElementById('toast');
+    const titleEl = document.getElementById('toast-title');
+    const descEl = document.getElementById('toast-desc');
+    if (toast && titleEl && descEl) {
+      titleEl.innerText = title;
+      descEl.innerText = desc;
+      toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+      }, 4000);
+    }
+  }
+
+  // Interactive draggable split slider handle
+  (function initSplitHandle() {
+    const viewport = document.getElementById('retinal-viewport');
+    const splitHandle = document.getElementById('split-handle');
+    const splitCurtain = document.getElementById('split-curtain');
+    let isDragging = false;
+
+    if (!viewport || !splitHandle || !splitCurtain) return;
+
+    function onMove(e) {
+      if (!isDragging) return;
+      const rect = viewport.getBoundingClientRect();
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      let pos = (clientX - rect.left) / rect.width;
+      if (pos < 0.05) pos = 0.05;
+      if (pos > 0.95) pos = 0.95;
+      const pct = (pos * 100) + '%';
+      splitHandle.style.left = pct;
+      splitCurtain.style.width = pct;
+    }
+
+    splitHandle.addEventListener('mousedown', () => isDragging = true);
+    splitHandle.addEventListener('touchstart', () => isDragging = true);
+    window.addEventListener('mouseup', () => isDragging = false);
+    window.addEventListener('touchend', () => isDragging = false);
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('touchmove', onMove);
+  })();
+</script></main></div></body></html>
