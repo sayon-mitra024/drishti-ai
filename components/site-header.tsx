@@ -6,7 +6,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-surface-container-high bg-surface-container-lowest/95 backdrop-blur-sm">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 md:px-6">
         <Link href="/" className="flex items-center text-primary">
-          <Image src="/logo.png" alt="Drishti AI" width={108} height={32} priority className="h-8 w-auto" />
+          <Image src="/logo.png" alt="Drishti AI" width={140} height={40} priority className="h-10 w-auto" />
         </Link>
         <nav className="flex items-center gap-1 text-sm">
           <Link
