@@ -13,7 +13,7 @@
   <img src="https://img.shields.io/badge/Model-EfficientNet--B0-EE4C2C?logo=pytorch&logoColor=white" />
   <img src="https://img.shields.io/badge/Hugging_Face-Space-FFD21E?logo=huggingface&logoColor=black" />
   <img src="https://img.shields.io/badge/Deployed_on-Vercel-000000?logo=vercel&logoColor=white" />
-  <img src="https://img.shields.io/badge/License-MIT-green.svg" />
+  <img src="https://img.shields.io/badge/License-All--Rights--Reserved-red.svg" />
 </p>
 
 <p align="center">
@@ -303,6 +303,10 @@ Areas of interest: Artificial Intelligence, Machine Learning, Computer Vision, A
 
 - Email: `sayonmitracode@gmail.com>`
 
-## License
+## Copyright & Usage
 
-This project is licensed under the **MIT License**. See [`LICENSE`](./LICENSE) for details.
+Original software, technical implementation and project-specific creative materials © 2026 Sayon Mitra, except where otherwise stated.
+
+This repository contains third-party software and services that remain subject to their respective licenses and terms. No additional permission is granted to reproduce, modify, redistribute, publish, sublicense, sell, or create derivative works from original protected project materials except where expressly permitted by an applicable license or written permission.
+
+See [`LICENSE`](./LICENSE), [`OWNERSHIP.md`](./OWNERSHIP.md), and [`THIRD-PARTY-NOTICES.md`](./THIRD-PARTY-NOTICES.md). The deployed medical AI model is separately served and is not claimed as exclusively owned by this website repository.

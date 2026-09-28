@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Drishti AI — AI-Assisted Retinal Screening",
   description:
     "AI-assisted diabetic retinopathy screening prototype: upload a retinal fundus image and get a 5-class severity assessment with confidence, probability distribution, explainability overlay, and referral guidance.",
+  authors: [{ name: "Sayon Mitra" }],
 }
 
 export const viewport: Viewport = {

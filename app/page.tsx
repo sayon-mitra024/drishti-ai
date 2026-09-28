@@ -2,6 +2,7 @@ import Link from "next/link"
 import { CursorEyeField } from "@/components/cursor-eye-field"
 import { SiteHeader } from "@/components/site-header"
 import { EyeScrollHero } from "@/components/eye-scroll-hero"
+import { SiteFooter } from "@/components/site-footer"
 
 const PIPELINE_STAGES = [
   { step: "01", label: "Capture", desc: "Upload a retinal fundus photograph (JPG/PNG)." },
@@ -176,7 +177,7 @@ export default function Home() {
           <section className="clinical-card flex flex-col gap-6 overflow-hidden p-6 backdrop-blur-sm md:p-8">
             <div>
               <p className="mb-2 font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">The technology</p>
-              <h2 className="text-2xl font-semibold tracking-tight text-on-surface">Built on a real, validated pipeline</h2>
+              <h2 className="text-2xl font-semibold tracking-tight text-on-surface">Built on a real AI inference and research pipeline</h2>
               <p className="mt-2 max-w-2xl text-sm leading-relaxed text-on-surface-variant">
                 Every screening runs through a dedicated vision model and an explainability layer purpose-built for retinal imaging — not a generic image classifier repurposed for the job.
               </p>
@@ -229,19 +230,7 @@ export default function Home() {
           </section>
         </div>
 
-        <footer className="border-t border-surface-container-high bg-surface-container-lowest/90 px-4 py-6 backdrop-blur-sm md:px-6">
-          <div className="mx-auto flex max-w-7xl flex-col gap-3 text-xs text-on-surface-variant">
-            <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-              <p>© {new Date().getFullYear()} Drishti AI. AI-assisted retinal screening system.</p>
-              <p>
-                Built by <span className="font-medium text-on-surface">Sayon Mitra</span>
-              </p>
-            </div>
-            <p className="text-on-surface-variant/70">
-              Application: {APPLICATION_STACK.join(" · ")} &nbsp;|&nbsp; Inference backend: {INFERENCE_STACK.join(" · ")}
-            </p>
-          </div>
-        </footer>
+        <SiteFooter />
       </div>
     </main>
   )
