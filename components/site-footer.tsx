@@ -7,7 +7,7 @@ export function SiteFooter() {
   return (
     <footer className="bg-surface-container-lowest/90 px-4 py-12 backdrop-blur-sm md:px-6">
       <div className="mx-auto max-w-7xl border-t border-surface-container-high pt-8">
-        <nav aria-label="Footer" className="grid grid-cols-1 gap-x-8 gap-y-10 min-[480px]:grid-cols-2 lg:grid-cols-[1.5fr_repeat(3,minmax(0,1fr))]">
+        <nav aria-label="Footer" className="grid grid-cols-1 gap-x-8 gap-y-10 min-[480px]:grid-cols-2 lg:grid-cols-[1.5fr_repeat(4,minmax(0,1fr))]">
           <section className="min-[480px]:col-span-2 lg:col-span-1">
             <Link href="/" className="inline-flex rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
               <Image src="/logo.png" alt="Drishti AI" width={112} height={32} className="h-8 w-auto" />
@@ -18,6 +18,9 @@ export function SiteFooter() {
             <Link className={linkClass} href="/">Overview</Link>
             <Link className={linkClass} href="/screening">Screening Workspace</Link>
             <Link className={linkClass} href="/about">About</Link>
+          </FooterGroup>
+          <FooterGroup title="Applications">
+            <Link className={linkClass} href="/download">Download App</Link>
           </FooterGroup>
           <FooterGroup title="Legal">
             <Link className={linkClass} href="/legal">Copyright &amp; Licenses</Link>
